@@ -17,7 +17,7 @@ class KeyHolder extends Keys
 {
   
     /** @var array[] $keys The list of identifiers. */
-    protected static $keys = [];
+    private static $keys = [];
   
     /**
      * Checks to see if the identifier exists.
@@ -29,9 +29,26 @@ class KeyHolder extends Keys
      */
     protected static function exists(string $id): bool
     {
-        if (\array_key_exists($id, self::Keys)) {
+        if (\array_key_exists($id, self::$keyIdentifiers)) {
             return \true;
         }
         return \false;
+    }
+  
+    /**
+     * Get the entry based on the identifier.
+     * This function should not be visible unless extended.
+     *
+     * @param string $id Identifier of the entry to look for.
+     *
+     * @return mixed Entry.
+     */
+    protected static function get(string $id)
+    {
+        /**
+         * No need to check to see if it exists because it has already
+         * been checked. No need to recheck. :)
+         */
+        return $keys[$id];
     }
 }
