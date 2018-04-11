@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace Ularanigu\Fusion\Exception;
 
 /**
- * NotFoundException.
+ * MethodNotFoundException.
  */
 class MethodNotFoundException extends NotFoundException
 {
