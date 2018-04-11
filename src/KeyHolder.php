@@ -13,7 +13,7 @@ namespace Ularanigu\Fusion;
 /**
  * KeyHolder.
  */
-class KeyHolder extends Keys
+class KeyHolder
 {
   
     /** @var array[] $keys The list of identifiers. */
