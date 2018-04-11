@@ -33,10 +33,10 @@ class Container extends KeyHolder implements ContainerInterface
      */
     public function get($id)
     {
-        if (!self::exists($id)) {
+        if (!static::exists($id)) {
             throw new Exception\IdentifierNotFoundException('The requested id does not exist in the container.');
         }
-        return self::get($id);
+        return static::get($id);
     }
     
     /**
@@ -52,7 +52,7 @@ class Container extends KeyHolder implements ContainerInterface
      */
     public function has($id)
     {
-        if (!self::exists($id)) {
+        if (!static::exists($id)) {
             return \false;
         }
         return \true;
