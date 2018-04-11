@@ -33,8 +33,28 @@ class Container extends KeyHolder implements ContainerInterface
      */
     public function get($id)
     {
-        if (!$this->exists($id)) {
+        if (!self::exists($id)) {
             throw new Exception\IdentifierNotFoundException('The requested id does not exist in the container.');
         }
+        return self::get($id);
+    }
+    
+    /**
+     * Returns true if the container can return an entry for the given identifier.
+     * Returns false otherwise.
+     *
+     * `has($id)` returning true does not mean that `get($id)` will not throw an exception.
+     * It does however mean that `get($id)` will not throw a `NotFoundExceptionInterface`.
+     *
+     * @param string $id Identifier of the entry to look for.
+     *
+     * @return bool
+     */
+    public function has($id)
+    {
+        if (!self::exists($id)) {
+            return \false;
+        }
+        return \true;
     }
 }
