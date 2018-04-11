@@ -1,5 +1,6 @@
 {
   "name": "ularanigu/fusion",
+  "description": "A PSR-11 compliant dependency injector.",
   "keywords": [
     "psr-11-compliant",
     "dependency-injector",
