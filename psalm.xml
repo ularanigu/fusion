@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<psalm name="Fusion Static Analysis Tests."
-       stopOnFirstError="false"
-       useDocblockTypes="true"
-       totallyTyped="true">
-    <projectFiles>
-        <directory name="./src" />
-    </projectFiles>
+<psalm
+    name="Fusion Static Analysis Tests."
+    stopOnFirstError="false"
+    useDocblockTypes="true"
+    totallyTyped="true">
+  <projectFiles>
+    <directory name="./src" />
+  </projectFiles>
 </psalm>
