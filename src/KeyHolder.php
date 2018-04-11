@@ -43,7 +43,7 @@ class KeyHolder
      *
      * @return mixed Entry.
      */
-    protected static function get(string $id)
+    protected static function fetch(string $id)
     {
         /**
          * No need to check to see if it exists because it has already
