@@ -36,7 +36,7 @@ class Container extends KeyHolder implements ContainerInterface
         if (!static::exists($id)) {
             throw new Exception\IdentifierNotFoundException('The requested id does not exist in the container.');
         }
-        return static::get($id);
+        return self::get($id);
     }
     
     /**
