@@ -14,9 +14,10 @@ use Psr\Container\NotFoundExceptionInterface;
 use UnexpectedValueException;
 
 /**
- * @link  <https://secure.php.net/manual/en/class.unexpectedvalueexception.php>.
- * @link  <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md>.
- * @class NotFoundException.
+ * @link <https://secure.php.net/manual/en/class.unexpectedvalueexception.php>.
+ * @link <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md>.
+ * 
+ * NotFoundException.
  */
 class NotFoundException extends UnexpectedValueException implements NotFoundExceptionInterface
 {
