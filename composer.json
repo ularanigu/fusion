@@ -1,4 +1,8 @@
 {
   "name": "ularanigu/fusion",
-  "keywords": []
+  "keywords": [
+    "psr-11-compliant",
+    "dependency-injector",
+    "secure-by-default"
+  ]
 }
