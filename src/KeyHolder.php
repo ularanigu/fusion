@@ -16,7 +16,7 @@ namespace Ularanigu\Fusion;
 class KeyHolder
 {
   
-    /** @var array[] $keys The list of identifiers. */
+    /** @var array[] $keys The list of keys. */
     private static $keys = [];
   
     /**
@@ -29,7 +29,7 @@ class KeyHolder
      */
     protected static function exists(string $id): bool
     {
-        if (\array_key_exists($id, self::$keyIdentifiers)) {
+        if (\array_key_exists($id, self::$keys)) {
             return \true;
         }
         return \false;
@@ -49,6 +49,6 @@ class KeyHolder
          * No need to check to see if it exists because it has already
          * been checked. No need to recheck. :)
          */
-        return $keys[$id];
+        return self::$keys[$id];
     }
 }
