@@ -19,6 +19,6 @@ use UnexpectedValueException;
  * 
  * NotFoundException.
  */
-class NotFoundException extends UnexpectedValueException implements NotFoundExceptionInterface
+class NotFoundException extends UnexpectedValueException implements FusionExceptionInterface, NotFoundExceptionInterface
 {
 }
