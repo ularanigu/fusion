@@ -51,4 +51,17 @@ class KeyHolder
          */
         return self::$keys[$id];
     }
+  
+    /**
+     * Inject the array keys.
+     * This function should not be visible unless extended.
+     *
+     * @param array $someKeysToAdd A list of keys to add.
+     *
+     * @return void Return nothing.
+     */
+    protected static function add(array $someKeysToAdd): void
+    {
+        self::$keys += $someKeysToAdd;
+    }
 }
