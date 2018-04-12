@@ -28,6 +28,6 @@ class KeyHolderTest extends TestCase
     $this->assertTrue($res2);
     $this->assertTrue($res3);
     $this->assertTrue($res4);
-    $this->assertTrue($res5);
+    $this->assertTrue(!$res5);
   }
 }
