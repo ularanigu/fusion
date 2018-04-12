@@ -5,7 +5,10 @@
     "psr-11-compliant",
     "dependency-injector",
     "secure-by-default",
-    "container-management"
+    "container-management",
+    "easy-to-use",
+    "php71-component",
+    "php72-component"
   ],
   "license": "MIT",
   "require": {
