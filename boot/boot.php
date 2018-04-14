@@ -8,6 +8,15 @@ declare(strict_types=1);
  * @link    <https://github.com/ularanigu/fusion>.
  */
 
+function container($service = null)
+{
+    /** In compliance with KeyHolder. */
+    $container = new Ularanigu\Fusion\Container();
+    if ($container->has($service)) {
+        return $container->get($service);
+    }
+}
+
 if (!function_exists('array_depth')) {
 function array_depth(array $array): int
 {
