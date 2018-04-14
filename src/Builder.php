@@ -26,7 +26,7 @@ class Builder extends KeyHolder implements BuilderInterface, ArrayAccess
     /**
      * Builder constructor.
      *
-     * @param array $keysToInject Some keys to inject off the bat.
+     * @param array[] $keysToInject Some keys to inject off the bat.
      *
      * NOTE: If objects are injected through constructors you will not be able to inject parameters in
      * the object you just injected.
