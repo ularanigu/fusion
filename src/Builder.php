@@ -10,10 +10,14 @@ declare(strict_types=1);
 
 namespace Ularanigu\Fusion;
 
+use ArrayAccess;
+
 /**
+ * @link <https://secure.php.net/manual/en/class.arrayaccess.php>.
+ *
  * Builder.
  */
-class Builder extends KeyHolder implements BuilderInterface
+class Builder extends KeyHolder implements BuilderInterface, ArrayAccess
 {
     
     /** @var array[] $keys The list of local keys. */
