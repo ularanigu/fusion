@@ -28,7 +28,7 @@
       "Ularanigu\\Fusion\\": "./src"
     },
     "files": [
-      "./boot.php"
+      "./boot/boot.php"
     ]
   },
   "require-dev": {
