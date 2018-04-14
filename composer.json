@@ -31,6 +31,11 @@
       "./boot/boot.php"
     ]
   },
+  "autoload-dev": {
+    "files": [
+      "./tests/before_tests.php"
+    ]
+  }
   "require-dev": {
     "phpunit/phpunit": "^7",
     "vimeo/psalm": "^1"
