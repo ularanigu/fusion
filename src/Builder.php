@@ -29,8 +29,8 @@ class Builder extends KeyHolder implements BuilderInterface
     public function __construct(array $keysToInject = array())
     {
         if (!empty($keysToInject)) {
-            if (\array_depth($keysToInject) !== 1) {
-                throw new InvalidArrayDepthException('The array depth is not 1.');
+            if (\array_depth($keysToInject) >= 1) {
+                throw new InvalidArrayDepthException('The array depth is not 1 or higher.');
             }
             static::add($keysToInject);
         }
