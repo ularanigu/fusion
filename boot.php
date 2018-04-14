@@ -8,12 +8,15 @@ declare(strict_types=1);
  * @link    <https://github.com/ularanigu/fusion>.
  */
 
-function (array $array): int
+if (!function_exists('array_depth')) {
+function array_depth(array $array): int
 {
     return intval(getArrayMaxDepth($array));
 }
+}
 
 /** @link https://stackoverflow.com/a/19036761/9524661 {{ **/
+if (!function_exists('getArrayMaxDepth')) {
 function getArrayMaxDepth($input)
 {
     if (!canVarLoop($input)) {
@@ -27,8 +30,11 @@ function getArrayMaxDepth($input)
     }
     return max($result);
 }
+}
+if (!function_exists('canVarLoop')) {
 function canVarLoop($input)
 {
     return (is_array($input) || $input instanceof Traversable) ? true : false;
+}
 }
 /** }} */
