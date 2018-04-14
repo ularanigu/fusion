@@ -15,6 +15,9 @@ namespace Ularanigu\Fusion;
  */
 class Builder extends KeyHolder implements BuilderInterface
 {
+    
+    /** @var array[] $keys The list of local keys. */
+    private $localKeys = array();
 
     /**
      * Builder constructor.
@@ -32,7 +35,7 @@ class Builder extends KeyHolder implements BuilderInterface
             if (\array_depth($keysToInject) >= 1) {
                 throw new InvalidArrayDepthException('The array depth is not 1 or higher.');
             }
-            static::add($keysToInject);
+            self::$localKeys += $keysToInject;
         }
     }
 }
