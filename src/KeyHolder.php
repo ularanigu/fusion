@@ -60,8 +60,8 @@ class KeyHolder
      *
      * @return void Return nothing.
      */
-    protected static function add(array $someKeysToAdd): void
+    protected static function inject(array $someKeysToAdd): void
     {
-        self::$keys += $someKeysToAdd;
+        self::$keys = $someKeysToAdd;
     }
 }
