@@ -17,7 +17,7 @@ class KeyHolder
 {
   
     /** @var array[] $keys The list of keys. */
-    private static $keys = [];
+    private static $keys = array();
   
     /**
      * Checks to see if the identifier exists.
