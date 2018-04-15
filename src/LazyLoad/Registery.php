@@ -41,17 +41,17 @@ class Registery
      *
      * @param string $className The class name.
      *
-     * @throws LazyLoadException If the class name is empty.
+     * @throws LazyLoadException The class name is empty or does not exist.
      *
      * @return void Return nothing.
      */
     public function setClassName($className): void
     {
         $className = \trim($className);
-        if (!empty($className)) {
+        if (\class_exists($className)) {
             $this->className = $className;
         } else {
-            throw new LazyLoadException('The class name is empty.');
+            throw new LazyLoadException('The class name is empty or does not exist.');
         }
     }
 
